@@ -45,8 +45,8 @@ class _NumQuestionScreenState extends State<NumQuestionScreen> {
             right: 30,
             top: 80,
             bottom: 40,
-            child: SvgPicture.asset(
-              'assets/images/flags.svg',
+            child: Image.asset(
+              'assets/images/flags.png',
             ),
           ),
           Positioned(
@@ -55,7 +55,7 @@ class _NumQuestionScreenState extends State<NumQuestionScreen> {
             top: 80,
             bottom: 40,
             child: Container(
-              color: scheme.surface.withOpacity(0.8),
+              color: scheme.surface.withOpacity(0.85),
             ),
           ),
           Positioned(

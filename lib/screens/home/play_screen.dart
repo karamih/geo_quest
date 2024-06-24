@@ -23,8 +23,8 @@ class PlayScreen extends StatelessWidget {
             right: 30,
             top: 80,
             bottom: 40,
-            child: SvgPicture.asset(
-              'assets/images/flags.svg',
+            child: Image.asset(
+              'assets/images/flags.png',
             ),
           ),
           Positioned(
@@ -33,7 +33,7 @@ class PlayScreen extends StatelessWidget {
               top: 80,
               bottom: 40,
               child: Container(
-                color: scheme.surface.withOpacity(0.8),
+                color: scheme.surface.withOpacity(0.85),
               )),
           Positioned(
               top: 120,

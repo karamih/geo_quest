@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geo_quest/screens/home/play_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,8 +21,8 @@ class HowToPlayScreen extends StatelessWidget {
             right: 30,
             top: 80,
             bottom: 40,
-            child: SvgPicture.asset(
-              'assets/images/flags.svg',
+            child: Image.asset(
+              'assets/images/flags.png',
             ),
           ),
           Positioned(
@@ -32,7 +31,7 @@ class HowToPlayScreen extends StatelessWidget {
             top: 80,
             bottom: 40,
             child: Container(
-              color: scheme.surface.withOpacity(0.8),
+              color: scheme.surface.withOpacity(0.85),
             ),
           ),
           Positioned(
@@ -59,13 +58,30 @@ class HowToPlayScreen extends StatelessWidget {
                 border: Border.all(color: scheme.secondary, width: 5),
               ),
               child: Center(
-                child: Text(
-                  '',
-                  style: GoogleFonts.inter(
-                    fontSize: 14,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
+                child: Column(
+                  children: [
+                    const SizedBox(height: 60),
+                    Text(
+                      'How To Play',
+                      style: GoogleFonts.rubikWetPaint(
+                        fontSize: 36,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 30),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                      child: Text(
+                        "To start the game, you have to choose the number of questions. After the desired number of questions is determined, the game starts.Answer the questions in order and carefully so that you can get three stars.Otherwise, the number of correct questions will be determined and you can resume the same game and questions and correct your mistakes!",
+                        style: GoogleFonts.rubik(
+                          fontSize: 14,
+                          color: Colors.white,height: 3
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),

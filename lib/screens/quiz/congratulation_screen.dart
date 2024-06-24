@@ -22,8 +22,8 @@ class CongratulationScreen extends StatelessWidget {
             right: 30,
             top: 80,
             bottom: 40,
-            child: SvgPicture.asset(
-              'assets/images/flags.svg',
+            child: Image.asset(
+              'assets/images/flags.png',
             ),
           ),
           Positioned(
@@ -32,7 +32,7 @@ class CongratulationScreen extends StatelessWidget {
               top: 80,
               bottom: 40,
               child: Container(
-                color: scheme.tertiary.withOpacity(0.6),
+                color: scheme.tertiary.withOpacity(0.85),
               )),
           Positioned(
               top: 120,

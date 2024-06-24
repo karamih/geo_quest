@@ -52,17 +52,20 @@ class _QuizScreenState extends State<QuizScreen> {
       questionCounter++;
       if (questionCounter == questionsNum) {
         if (questionsCorrectness == questionsNum) {
-          Navigator.pushNamed(context, CongratulationScreen.routeName);
+          Navigator.pushReplacementNamed(
+              context, CongratulationScreen.routeName);
         } else if (questionsCorrectness >= questionsNum / 2.round()) {
-          Navigator.pushNamed(context, WinResultScreen.routeName, arguments: {
-            "questionsCorrectness": questionsCorrectness,
-            "questionsNum": questionsNum
-          });
+          Navigator.pushReplacementNamed(context, WinResultScreen.routeName,
+              arguments: {
+                "questionsCorrectness": questionsCorrectness,
+                "questionsNum": questionsNum
+              });
         } else {
-          Navigator.pushNamed(context, LoseResultScreen.routeName, arguments: {
-            "questionsCorrectness": questionsCorrectness,
-            "questionsNum": questionsNum
-          });
+          Navigator.pushReplacementNamed(context, LoseResultScreen.routeName,
+              arguments: {
+                "questionsCorrectness": questionsCorrectness,
+                "questionsNum": questionsNum
+              });
         }
       } else {
         questionIndex = Random().nextInt(questions.length);
@@ -85,8 +88,8 @@ class _QuizScreenState extends State<QuizScreen> {
             right: 30,
             top: 80,
             bottom: 40,
-            child: SvgPicture.asset(
-              'assets/images/halfflags.svg',
+            child: Image.asset(
+              'assets/images/halfflags.png',
             ),
           ),
           Positioned(
@@ -95,7 +98,7 @@ class _QuizScreenState extends State<QuizScreen> {
             top: 80,
             bottom: 40,
             child: Container(
-              color: scheme.surface.withOpacity(0.8),
+              color: scheme.surface.withOpacity(0.85),
             ),
           ),
           Positioned(

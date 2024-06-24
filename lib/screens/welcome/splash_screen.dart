@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geo_quest/screens/welcome/welcome_screen.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -57,8 +56,8 @@ class _SplashScreenState extends State<SplashScreen>
             right: 30,
             top: 80,
             bottom: 40,
-            child: SvgPicture.asset(
-              'assets/images/flags.svg',
+            child: Image.asset(
+              'assets/images/flags.png',
             ),
           ),
           Positioned(
@@ -67,7 +66,7 @@ class _SplashScreenState extends State<SplashScreen>
               top: 80,
               bottom: 40,
               child: Container(
-                color: scheme.surface.withOpacity(0.8),
+                color: scheme.surface.withOpacity(0.85),
               )), // Animated logo
           Positioned(
             top: 0,
